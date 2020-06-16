@@ -35,8 +35,8 @@ class Node:
 def insert_level_order(arr,root,i,n):
     #base case for recursion
     if i< n:
-        temp = Node(arr[i])
-        root = temp
+        root = Node(arr[i])
+        #root = temp
 
         # insert left childjmm
         root.left = insert_level_order(arr,root.left, 2*i+1, n)
@@ -46,7 +46,7 @@ def insert_level_order(arr,root,i,n):
 
 def printInorder(root):
     if root:
-        # First recur on left child
+        # First recur on left child/,,
         printInorder(root.left)
         # then print the data of node
         print(root.val)
